@@ -10,7 +10,7 @@ const socialLinks = [
 const quickLinks = [
   { label: 'About Me', target: 'highlights-section' },
   { label: 'Skills', target: 'skills-section' },
-  { label: 'Portfolio', target: 'portfolio-section' },
+  { label: 'Experience & Education', target: 'experience-education-section' },
   { label: 'Contact Me', target: 'contact-section' },
 ];
 
@@ -35,7 +35,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="flex-1 min-w-[220px] mb-8 md:mb-0">
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-3xl text-red-600 font-bold"><i className="fa-solid fa-infinity"></i></span>
+              <img src="/logo.png" alt="Logo" className="w-8 h-8" />
               <span className="text-2xl font-extrabold">MDR</span>
             </div>
             <p className="text-gray-300 text-sm mb-6">The personal portfolio category includes websites or physical displays</p>

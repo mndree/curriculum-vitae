@@ -57,7 +57,7 @@ const ExperienceEducation = () => {
   };
 
   return (
-    <section className="py-20 bg-black text-white" data-aos="fade-up">
+    <section id="experience-education-section" className="py-20 bg-black text-white" data-aos="fade-up">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Education - First */}

@@ -217,9 +217,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Email**: [your.email@example.com](#)
-- **LinkedIn**: [LinkedIn Profile](#)
-- **GitHub**: [GitHub Profile](#)
+- **Email**: [juliansyahmandree@gmail.com](mailto:juliansyahmandree@gmail.com)
+- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/mndree/)
+- **GitHub**: [GitHub Profile](https://github.com/mndree)
 - **Portfolio**: [Portfolio Website](#)
 
 ---

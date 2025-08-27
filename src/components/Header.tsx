@@ -4,7 +4,7 @@ const navLinks = [
   { label: 'Home', target: 'hero-section' },
   { label: 'About', target: 'highlights-section' },
   { label: 'Skills', target: 'skills-section' },
-  { label: 'Portfolio', target: 'portfolio-section' },
+  { label: 'Experience & Education', target: 'experience-education-section' },
   { label: 'Contact', target: 'contact-section' },
 ];
 
@@ -35,6 +35,27 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // On small screens, lock body scroll so touch scroll goes to sidebar
+  useEffect(() => {
+    const isSmallScreen = window.innerWidth < 1024; // match lg breakpoint
+    const shouldLock = isSmallScreen && (sidebarOpen || sidebarClosing);
+    const { body, documentElement } = document;
+    if (shouldLock) {
+      body.style.overflow = 'hidden';
+      documentElement.style.overflow = 'hidden';
+      body.style.touchAction = 'none';
+    } else {
+      body.style.overflow = '';
+      documentElement.style.overflow = '';
+      body.style.touchAction = '';
+    }
+    return () => {
+      body.style.overflow = '';
+      documentElement.style.overflow = '';
+      body.style.touchAction = '';
+    };
+  }, [sidebarOpen, sidebarClosing]);
+
   // Handle sidebar close with animation
   const handleSidebarClose = () => {
     setSidebarClosing(true);
@@ -55,7 +76,7 @@ const Header = () => {
       >
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <span className="text-2xl text-red-600 font-bold"><i className="fa-solid fa-infinity"></i></span>
+          <img src="/logo.png" alt="Logo" className="w-8 h-8" />
           <span className="text-lg font-extrabold">MDR</span>
         </div>
         {/* Nav Links */}
@@ -99,7 +120,7 @@ const Header = () => {
       {(sidebarOpen || sidebarClosing) && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex">
           {/* Minimal Sidebar for Mobile */}
-          <aside className={`w-full bg-[#181818] h-full shadow-2xl p-6 flex flex-col relative lg:hidden ${sidebarClosing ? 'animate-slideOutLeft' : 'animate-slideInLeft'}`}>
+          <aside className={`w-full bg-[#181818] h-full shadow-2xl p-6 flex flex-col relative overflow-y-auto hide-scrollbar overscroll-contain touch-pan-y lg:hidden ${sidebarClosing ? 'animate-slideOutLeft' : 'animate-slideInLeft'}`}>
             {/* Close Button */}
             <button
               className="absolute top-4 right-4 text-2xl text-white hover:text-red-500"
@@ -110,11 +131,11 @@ const Header = () => {
             </button>
             {/* Logo */}
             <div className="flex items-center gap-2 mb-8 mt-2">
-              <span className="text-2xl text-red-600 font-bold"><i className="fa-solid fa-infinity"></i></span>
+              <img src="/logo.png" alt="Logo" className="w-8 h-8" />
               <span className="text-lg font-extrabold">MDR</span>
             </div>
             {/* Nav Links */}
-            <div className="flex flex-col gap-1 mb-8 w-full">
+            <div className="order-3 flex flex-col gap-1 mt-4 w-full">
               {navLinks.map((link) => (
                 <button
                   key={link.label}
@@ -129,27 +150,54 @@ const Header = () => {
                 </button>
               ))}
             </div>
-            {/* Social Icons */}
-            <div className="mt-auto">
-              <div className="font-bold text-sm mb-2 text-white">Find with me</div>
-              <div className="flex gap-3">
-                {socialLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    aria-label={link.label}
-                    className="w-9 h-9 flex items-center justify-center rounded-full bg-[#222] hover:bg-red-600 transition-colors text-lg"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className={link.icon}></i>
-                  </a>
-                ))}
+            {/* Profile and Contact (mobile) */}
+            <div className="order-2 mt-6">
+              <img
+                src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=400&h=200&q=80"
+                alt="Profile"
+                className="w-full h-32 object-cover rounded-lg mb-4"
+              />
+              <div className="text-center mb-4">
+                <div className="font-bold text-lg mb-1">Freelancer delivering exceptional Webflow, and Next.js solutions.</div>
+                <div className="text-gray-300 text-sm mb-2">
+                  I am a skilled freelancer specializing in Webflow development, Figma design, and Next.js projects. I deliver creative, dynamic, and user-centric web solutions.
+                </div>
+              </div>
+              <div className="w-full mb-4">
+                <div className="flex items-center gap-3 mb-2 text-red-500">
+                  <i className="fa-solid fa-phone"></i>
+                  <span className="text-white font-semibold">+92 (8800) - 98670</span>
+                </div>
+                <div className="flex items-center gap-3 mb-2 text-red-500">
+                  <i className="fa-solid fa-envelope"></i>
+                  <span className="text-white font-semibold">example@info.com</span>
+                </div>
+                <div className="flex items-center gap-3 text-red-500">
+                  <i className="fa-solid fa-location-dot"></i>
+                  <span className="text-white font-semibold">66 BROKLYANT, NEW YORK 3269</span>
+                </div>
+              </div>
+              <div className="w-full mb-2">
+                <div className="font-bold text-sm mb-2 text-white">Find with me</div>
+                <div className="flex gap-3">
+                  {socialLinks.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      aria-label={link.label}
+                      className="w-9 h-9 flex items-center justify-center rounded-full bg-[#222] hover:bg-red-600 transition-colors text-lg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className={link.icon}></i>
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </aside>
           {/* Detailed Sidebar for Desktop */}
-          <aside className={`w-full max-w-xs bg-[#181818] h-full shadow-2xl p-6 flex flex-col relative hidden lg:flex ${sidebarClosing ? 'animate-slideOutLeft' : 'animate-slideInLeft'}`}>
+          <aside className={`w-full max-w-xs bg-[#181818] h-full shadow-2xl p-6 flex flex-col relative overflow-y-auto hide-scrollbar hidden lg:flex ${sidebarClosing ? 'animate-slideOutLeft' : 'animate-slideInLeft'}`}>
             {/* Close Button */}
             <button
               className="absolute top-4 right-4 text-2xl text-white hover:text-red-500"
@@ -161,7 +209,7 @@ const Header = () => {
             {/* Sidebar Content */}
             <div className="flex flex-col items-center mt-6">
               <div className="flex items-center gap-2 mb-4">
-                <span className="text-2xl text-red-600 font-bold"><i className="fa-solid fa-infinity"></i></span>
+                <img src="/logo.png" alt="Logo" className="w-8 h-8" />
                 <span className="text-lg font-extrabold">MDR</span>
               </div>
               <img

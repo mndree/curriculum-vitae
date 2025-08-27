@@ -14,6 +14,23 @@ body {
   background-color: black;
 }
 
+/* Prevent horizontal overflow causing right-side gap */
+html, body, #root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbars but keep scroll functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

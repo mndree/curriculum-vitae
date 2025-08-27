@@ -1,0 +1,105 @@
+/* Key Benefits Animations */
+.geometric-shape-benefits {
+  position: absolute;
+  opacity: 0.3;
+  animation: float-shape-benefits 20s ease-in-out infinite;
+}
+
+.geometric-shape-benefits:nth-child(1) {
+  top: 10%;
+  left: 5%;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, #dc2626, #ef4444);
+  transform: rotate(45deg);
+  border-radius: 8px;
+}
+
+.geometric-shape-benefits:nth-child(2) {
+  top: 60%;
+  right: 10%;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #b91c1c, #dc2626);
+  transform: rotate(30deg);
+  border-radius: 50%;
+}
+
+.geometric-shape-benefits:nth-child(3) {
+  top: 30%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #991b1b, #b91c1c);
+  transform: rotate(60deg);
+  border-radius: 30px;
+}
+
+@keyframes float-shape-benefits {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--rotation, 45deg));
+  }
+  25% {
+    transform: translateY(-20px) rotate(calc(var(--rotation, 45deg) + 10deg));
+  }
+  50% {
+    transform: translateY(-10px) rotate(calc(var(--rotation, 45deg) - 5deg));
+  }
+  75% {
+    transform: translateY(-25px) rotate(calc(var(--rotation, 45deg) + 5deg));
+  }
+}
+
+/* Tag List Animations */
+.tag-row-1 {
+  animation: slide-left 25s linear infinite;
+  width: max-content;
+}
+
+.tag-row-2 {
+  animation: slide-right 30s linear infinite;
+  width: max-content;
+}
+
+.tag-row-3 {
+  animation: slide-left 35s linear infinite;
+  width: max-content;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-33.33%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Hover effects for tags */
+.tag-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tag-row-1,
+  .tag-row-2,
+  .tag-row-3 {
+    animation-duration: 20s;
+  }
+  
+  .tag-item {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+}

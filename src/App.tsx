@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import Hero from './sections/Hero';
+import KeyBenefits from './sections/KeyBenefits';
+import TagList from './sections/TagList';
+import Highlights from './sections/Highlights';
+import ExperienceEducation from './sections/ExperienceEducation';
+import Skills from './sections/Skills';
+import Portfolio from './sections/Portfolio';
+import Expertise from './sections/Expertise';
+import SkillAreas from './sections/SkillAreas';
+import Contact from './sections/Contact';
+import Footer from './components/Footer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    return (
+        <div className="min-h-screen bg-black text-white font-sans">
+            <Header />
+            <section id="hero-section">
+              <Hero />
+            </section>
+            <KeyBenefits />
+            <TagList />
+            <Highlights />
+            <ExperienceEducation />
+            <Skills />
+            {/* <Portfolio />*/}
+            {/* <Expertise /> */}
+            <SkillAreas />
+            <Contact />
+            <Footer />
+        </div>
+    );
+};
 
 export default App;

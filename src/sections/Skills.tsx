@@ -105,7 +105,7 @@ const HexagonalProgress = ({ percentage }: { percentage: number }) => {
 };
 
 const SkillCard = ({ category }: { category: SkillCategory }) => (
-  <div className="bg-[#282A36] rounded-lg p-6 border border-red-500 hover:border-red-400 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20">
+  <div className="bg-[#141414] rounded-lg p-6 border border-red-500 hover:border-red-400 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20">
     <h3 className="text-white text-xl font-bold mb-6 text-center">{category.title}</h3>
     <div className="space-y-4">
       {category.skills.map((skill) => (

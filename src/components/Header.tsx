@@ -9,9 +9,9 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { href: '#', icon: 'fa-brands fa-instagram', label: 'Instagram' },
-  { href: '#', icon: 'fa-brands fa-linkedin-in', label: 'LinkedIn' },
-  { href: '#', icon: 'fa-brands fa-twitter', label: 'Twitter' },
+  { href: 'https://www.instagram.com/mndree_/', icon: 'fa-brands fa-instagram', label: 'Instagram' },
+  { href: 'https://www.linkedin.com/in/mndree/', icon: 'fa-brands fa-linkedin-in', label: 'LinkedIn' },
+  { href: 'https://github.com/mndree', icon: 'fa-brands fa-github', label: 'Github' },
   { href: '#', icon: 'fa-brands fa-facebook-f', label: 'Facebook' },
 ];
 
@@ -166,15 +166,15 @@ const Header = () => {
               <div className="w-full mb-4">
                 <div className="flex items-center gap-3 mb-2 text-red-500">
                   <i className="fa-solid fa-phone"></i>
-                  <span className="text-white font-semibold">+92 (8800) - 98670</span>
+                  <span className="text-white font-semibold">+62 878 4388 0148</span>
                 </div>
                 <div className="flex items-center gap-3 mb-2 text-red-500">
                   <i className="fa-solid fa-envelope"></i>
-                  <span className="text-white font-semibold">example@info.com</span>
+                  <span className="text-white font-semibold">juliansyahmandree@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3 text-red-500">
                   <i className="fa-solid fa-location-dot"></i>
-                  <span className="text-white font-semibold">66 BROKLYANT, NEW YORK 3269</span>
+                  <span className="text-white font-semibold">West Jakarta, Indonesia</span>
                 </div>
               </div>
               <div className="w-full mb-2">
@@ -226,15 +226,15 @@ const Header = () => {
               <div className="w-full mb-4">
                 <div className="flex items-center gap-3 mb-2 text-red-500">
                   <i className="fa-solid fa-phone"></i>
-                  <span className="text-white font-semibold">+92 (8800) - 98670</span>
+                  <span className="text-white font-semibold">+62 878 4388 0148</span>
                 </div>
                 <div className="flex items-center gap-3 mb-2 text-red-500">
                   <i className="fa-solid fa-envelope"></i>
-                  <span className="text-white font-semibold">example@info.com</span>
+                  <span className="text-white font-semibold">juliansyahmandree@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3 text-red-500">
                   <i className="fa-solid fa-location-dot"></i>
-                  <span className="text-white font-semibold">66 BROKLYANT, NEW YORK 3269</span>
+                  <span className="text-white font-semibold">West Jakarta, Indonesia</span>
                 </div>
               </div>
               <div className="w-full mb-4">

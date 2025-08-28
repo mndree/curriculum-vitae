@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { experience, education } from '../data/experienceEducation';
+import { useModal } from '../components/ModalProvider';
 import JobModal from '../components/JobModal';
 
 const Card = ({ date, title, company, gpa, onClick, isClickable }: { 
@@ -38,22 +39,20 @@ const Card = ({ date, title, company, gpa, onClick, isClickable }: {
 );
 
 const ExperienceEducation = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedJob, setSelectedJob] = useState<{
-    date: string;
-    title: string;
-    company: string;
-    description: string;
-  } | null>(null);
+  const { openModal, closeModal } = useModal();
 
   const handleJobClick = (job: any) => {
-    setSelectedJob(job);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedJob(null);
+    openModal({
+      content: (
+        <JobModal isOpen={true} onClose={closeModal} job={job} />
+      ),
+      options: {
+        title: job.title,
+        subtitle: <p className="text-red-500 font-semibold">{job.company}</p>,
+        size: 'md',
+        closeText: 'Close',
+      }
+    });
   };
 
   return (
@@ -80,7 +79,7 @@ const ExperienceEducation = () => {
               <h2 className="text-2xl md:text-3xl font-extrabold">My Experience</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {experience.map((item: { date: string; title: string; company: string; description: string }, idx: number) => (
+              {experience.map((item: { date: string; title: string; company: string; description: string | string[] }, idx: number) => (
                 <Card 
                   key={idx} 
                   {...item} 
@@ -93,12 +92,6 @@ const ExperienceEducation = () => {
         </div>
       </div>
 
-      {/* Job Description Modal */}
-      <JobModal 
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        job={selectedJob}
-      />
     </section>
   );
 };

@@ -3,25 +3,41 @@ export const experience = [
     date: 'September 2019 - September 2020',
     title: 'Mobile & Front End Developer',
     company: 'PT. Asia Trans Teknologi',
-    description: 'Developed mobile applications and front-end solutions using React Native and modern web technologies. Collaborated with cross-functional teams to deliver high-quality software products. Implemented responsive design principles and optimized application performance.',
+    description: [
+      'Developed mobile apps and front-end using React Native and modern web tech',
+      'Collaborated with cross‑functional teams to ship high‑quality products',
+      'Implemented responsive designs and optimized performance'
+    ],
   },
   {
     date: 'June 2021 - May 2022',
     title: 'Front End Developer',
     company: 'PT. TrawlBens Teknologi Anak Indonesia',
-    description: 'Built scalable front-end applications using React.js and TypeScript. Worked on improving user experience and interface design. Participated in code reviews and contributed to team development best practices.',
+    description: [
+      'Built scalable front‑end apps with React.js and TypeScript',
+      'Improved UX and interface design across core flows',
+      'Participated in code reviews and team best practices'
+    ],
   },
   {
     date: 'May 2022 – November 2022',
     title: 'Front End Developer',
     company: 'PT. Pelindo Ekosistem Digital Informasi',
-    description: 'Developed enterprise-level web applications for port management systems. Utilized modern front-end frameworks and state management solutions. Collaborated with UX/UI designers to implement intuitive user interfaces.',
+    description: [
+      'Developed enterprise web apps for port management systems',
+      'Used modern front‑end frameworks and state management',
+      'Collaborated with UX/UI to implement intuitive UIs'
+    ],
   },
   {
     date: 'November 2022 - Current',
     title: 'Senior Front End Developer',
     company: 'PT. Merdeka Copper Gold Tbk',
-    description: 'Lead front-end development initiatives and mentor junior developers. Architect and implement complex web applications using React, TypeScript, and modern build tools. Drive technical decisions and ensure code quality standards across the team.',
+    description: [
+      'Lead front‑end initiatives and mentor junior developers',
+      'Architect and implement complex web apps using React and TypeScript',
+      'Drive technical decisions and ensure team code quality standards'
+    ],
   },
 ];
 

@@ -106,13 +106,16 @@ const SkillAreas = () => {
               {skills.map((skill, idx) => (
                   <div
                       key={skill.title}
-                      className="bg-[#181818] rounded-2xl border border-white/10 p-8 flex flex-col items-center text-center transition-colors duration-300 hover:bg-red-700/80"
+                      className="bg-black/70 border border-white/10 rounded-2xl p-8 flex flex-col items-center text-center transition-all duration-500 hover:bg-black/90 hover:border-red-500/50 hover:shadow-2xl hover:shadow-red-500/20 hover:scale-105 transform hover:-translate-y-2 cursor-pointer group shadow-lg shadow-black/20 animate-pulse hover:ring-2 hover:ring-red-500/30"
                       data-aos="zoom-in"
                       data-aos-delay={600 + idx * 100}
+                      style={{
+                        animationDelay: `${idx * 0.2}s`
+                      }}
                   >
-                    <div className="mb-4">{skill.icon}</div>
-                    <div className="font-bold text-xl mb-2">{skill.title}</div>
-                    <div className="text-gray-300 text-sm">{skill.description}</div>
+                    <div className="mb-4 transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:drop-shadow-lg group-hover:drop-shadow-red-500/50 group-hover:filter group-hover:brightness-110">{skill.icon}</div>
+                    <div className="font-bold text-xl mb-2 transition-colors duration-300 group-hover:text-red-400">{skill.title}</div>
+                    <div className="text-gray-300 text-sm transition-colors duration-300 group-hover:text-gray-200">{skill.description}</div>
                   </div>
               ))}
             </div>

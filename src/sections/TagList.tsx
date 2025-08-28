@@ -52,10 +52,10 @@ const TagList = () => {
   ];
 
   return (
-    <section className="py-16 bg-black relative overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-black relative overflow-hidden w-full">
+      <div className="w-full px-4">
         {/* Section Title */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             What I Work With
           </h2>
@@ -65,17 +65,17 @@ const TagList = () => {
         </div>
 
         {/* Tag Rows */}
-        <div className="space-y-8 overflow-hidden">
+        <div className="space-y-8 overflow-hidden w-full">
           {tags.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className={`tag-row-${rowIndex + 1} flex gap-4 items-center`}
+              className={`tag-row-${rowIndex + 1} flex gap-4 items-center w-full`}
             >
               {/* Duplicate tags for seamless animation */}
               {[...row, ...row, ...row].map((tag, tagIndex) => (
                 <div
                   key={tagIndex}
-                  className="tag-item group flex items-center gap-2 px-4 py-2 rounded-full border border-gray-700 bg-gray-900/50 backdrop-blur-sm text-white hover:border-red-500 hover:bg-red-500/10 transition-all duration-300 cursor-pointer whitespace-nowrap"
+                  className="tag-item group flex items-center gap-2 px-4 py-2 rounded-full border border-gray-700 bg-gray-900/50 backdrop-blur-sm text-white hover:border-red-500 hover:bg-red-500/10 transition-all duration-300 cursor-pointer whitespace-nowrap flex-shrink-0"
                 >
                   <span className="text-sm">{tag.icon}</span>
                   <span className="text-sm font-medium group-hover:text-red-400 transition-colors duration-300">

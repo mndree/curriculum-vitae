@@ -1,9 +1,9 @@
 import React from 'react';
 
 const socialLinks = [
-  { href: '#', icon: 'fa-brands fa-instagram', label: 'Instagram' },
-  { href: '#', icon: 'fa-brands fa-linkedin-in', label: 'LinkedIn' },
-  { href: '#', icon: 'fa-brands fa-twitter', label: 'Twitter' },
+  { href: 'https://www.instagram.com/mndree_/', icon: 'fa-brands fa-instagram', label: 'Instagram' },
+  { href: 'https://www.linkedin.com/in/mndree/', icon: 'fa-brands fa-linkedin-in', label: 'LinkedIn' },
+  { href: 'https://github.com/mndree', icon: 'fa-brands fa-github', label: 'Github' },
   { href: '#', icon: 'fa-brands fa-facebook-f', label: 'Facebook' },
 ];
 
@@ -38,7 +38,7 @@ const Footer = () => {
               <img src="/logo.png" alt="Logo" className="w-8 h-8" />
               <span className="text-2xl font-extrabold">MDR</span>
             </div>
-            <p className="text-gray-300 text-sm mb-6">The personal portfolio category includes websites or physical displays</p>
+            <p className="text-gray-300 text-sm mb-6">A personal portfolio that showcases my work, achievements, and creative approach to building digital solutions</p>
             <div className="flex gap-3">
               {socialLinks.map((link) => (
                 <a
@@ -88,18 +88,16 @@ const Footer = () => {
           {/* Newsletter */}
           <div className="flex-1 min-w-[260px]">
             <div className="bg-[#181818] rounded-2xl border border-white/10 p-6">
-              <div className="font-bold text-lg mb-2">Newsletter</div>
-              <p className="text-gray-300 text-sm mb-4">The personal portfolio categor includes the a websites or representation</p>
-              <form className="flex items-center gap-2">
-                <input
-                  type="email"
-                  placeholder="Your e-mail"
-                  className="flex-1 bg-transparent border border-white/10 rounded-full px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-red-600 transition-colors"
-                />
-                <button type="submit" className="w-12 h-12 rounded-full bg-red-600 hover:bg-red-700 flex items-center justify-center text-white text-xl transition-colors">
-                  <i className="fa-solid fa-arrow-right"></i>
-                </button>
-              </form>
+              <div className="font-bold text-lg mb-2">Download My CV</div>
+              <p className="text-gray-300 text-sm mb-4">Get a copy of my resume and explore my skills, experience, and projects</p>
+              <a
+                href="/cv/Resume - Muhammad Andre Juliansyah.pdf"
+                download
+                className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full transition-colors"
+              >
+                <i className="fa-solid fa-download"></i>
+                Download Resume
+              </a>
             </div>
           </div>
         </div>

@@ -35,7 +35,7 @@ const Highlights = () => {
                   </div>
                   <h4 className="text-white text-lg font-bold mb-3 group-hover:text-red-400 transition-colors duration-300">UI/UX Design</h4>
                   <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300">
-                    Each one showcases my approach and dedication to detail, creativity
+                    Designing intuitive, user-friendly interfaces that enhance experiences and keep users engaged
                   </p>
                 </div>
 
@@ -46,7 +46,7 @@ const Highlights = () => {
                   </div>
                   <h4 className="text-white text-lg font-bold mb-3 group-hover:text-red-400 transition-colors duration-300">Web Development</h4>
                   <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300">
-                    Business consulting consul us to a provide expert advice businesses
+                    Building fast, scalable, and secure web applications with modern technologies
                   </p>
                 </div>
 
@@ -57,7 +57,7 @@ const Highlights = () => {
                   </div>
                   <h4 className="text-white text-lg font-bold mb-3 group-hover:text-red-400 transition-colors duration-300">Business Solutions</h4>
                   <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300">
-                    Each one showcases my approach and dedication to detail, creativity
+                    Delivering custom solutions that streamline processes and drive business growth
                   </p>
                 </div>
 
@@ -68,7 +68,7 @@ const Highlights = () => {
                   </div>
                   <h4 className="text-white text-lg font-bold mb-3 group-hover:text-red-400 transition-colors duration-300">Profit Partners</h4>
                   <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300">
-                    Business consulting consul us to a provide expert advice businesses
+                    Collaborating with clients to create strategies that maximize revenue and success
                   </p>
                 </div>
               </div>

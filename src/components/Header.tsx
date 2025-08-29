@@ -158,9 +158,9 @@ const Header = () => {
                 className="w-full h-32 object-cover rounded-lg mb-4"
               />
               <div className="text-center mb-4">
-                <div className="font-bold text-lg mb-1">Freelancer delivering exceptional Webflow, and Next.js solutions.</div>
+                <div className="font-bold text-lg mb-1">Front-End Developer crafting modern & scalable web apps.</div>
                 <div className="text-gray-300 text-sm mb-2">
-                  I am a skilled freelancer specializing in Webflow development, Figma design, and Next.js projects. I deliver creative, dynamic, and user-centric web solutions.
+                  I specialize in React.js, Next.js, and React Native to create fast, responsive, and scalable applications. With a passion for clean design and smooth user experiences, I bring ideas to life through code.
                 </div>
               </div>
               <div className="w-full mb-4">
@@ -218,9 +218,9 @@ const Header = () => {
                 className="w-full h-32 object-cover rounded-lg mb-4"
               />
               <div className="text-center mb-4">
-                <div className="font-bold text-lg mb-1">Freelancer delivering exceptional Webflow, and Next.js solutions.</div>
+                <div className="font-bold text-lg mb-1">Front-End Developer crafting modern & scalable web apps.</div>
                 <div className="text-gray-300 text-sm mb-2">
-                  I am a skilled freelancer specializing in Webflow development, Figma design, and Next.js projects. I deliver creative, dynamic, and user-centric web solutions.
+                  I specialize in React.js, Next.js, and React Native to create fast, responsive, and scalable applications. With a passion for clean design and smooth user experiences, I bring ideas to life through code.
                 </div>
               </div>
               <div className="w-full mb-4">
